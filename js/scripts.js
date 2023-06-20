@@ -42,7 +42,7 @@ const app = Vue.createApp({
                 },
                 {
                     id: 8,
-                    done: false,
+                    done: true,
                     text: 'Complete Todolist Vue project'
                 }
             ]
