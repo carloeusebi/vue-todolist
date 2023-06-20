@@ -88,6 +88,15 @@ const app = Vue.createApp({
             this.tasks.push(newTask);
 
             this.$refs.addInput.focus();
+        },
+        setAllDone() {
+
+        },
+        setAllToDo() {
+
+        },
+        deleteAll() {
+            this.tasks = [];
         }
     }
 
