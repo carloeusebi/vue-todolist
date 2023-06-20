@@ -38,13 +38,20 @@
         </header>
 
 
-        <div class="container-sm">
+        <div class="mycontainer">
 
             <!-- ADD TASK -->
             <div class="input-group mb-5" id="add-task">
                 <input v-model="newTask" v-on:keyup.enter="addTask" type="text" class="form-control"
                     placeholder="Add a task" ref="addInput">
                 <button @click="addTask" class="btn btn-outline-secondary" type="button">Add</button>
+            </div>
+
+            <!-- ACTIONS MENU -->
+            <div class="btn-group d-flex justify-content-center mb-5" role="group" id="action-menu">
+                <button @click="setAllDone" type="button" class="btn btn-outline-success">Set all done</button>
+                <button @click="setAllToDo" type="button" class="btn btn-outline-secondary">Set all todo</button>
+                <button @click="deleteAll" type="button" class="btn btn-outline-danger">Delete All</button>
             </div>
 
             <!-- TODO LIST -->
