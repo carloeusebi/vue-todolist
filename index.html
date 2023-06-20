@@ -40,7 +40,7 @@
 
         <div class="container-sm">
 
-            <div class="mb-5">
+            <section v-if="toDoTasks.length" class="mb-5">
                 <h2 class="mb-4 text-center">To Do Tasks</h2>
                 <p class="text-center">Click on task to complete it</p>
                 <ul class="list-unstyled">
@@ -53,9 +53,9 @@
                         <button type="button" class="btn-close"></button>
                     </li>
                 </ul>
-            </div>
+            </section>
 
-            <div>
+            <section v-if="completedTasks.length">
                 <h2 class="mb-4 text-center">Completed tasks</h2>
                 <p class="text-center">Click on task to move it to 'To Do Tasks'</p>
                 <ul class="list-unstyled">
@@ -68,7 +68,7 @@
                         <button type="button" class="btn-close"></button>
                     </li>
                 </ul>
-            </div>
+            </section>
 
 
         </div>
