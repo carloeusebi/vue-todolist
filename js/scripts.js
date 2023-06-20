@@ -5,17 +5,17 @@ const app = Vue.createApp({
             tasks: [
                 {
                     id: 1,
-                    done: false,
+                    done: true,
                     text: 'Learn HTML'
                 },
                 {
                     id: 2,
-                    done: false,
+                    done: true,
                     text: 'Learn CSS'
                 },
                 {
                     id: 3,
-                    done: false,
+                    done: true,
                     text: 'Learn Javascript'
                 },
                 {
