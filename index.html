@@ -44,33 +44,13 @@
                 <h2 class="mb-4 text-center">To Do Tasks</h2>
                 <p class="text-center">Click on task to complete it</p>
                 <ul class="list-unstyled">
-                    <li class="d-flex align-items-center justify-content-between">
+                    <li v-for="task in toDoTasks" :key="task.id"
+                        class="d-flex align-items-center justify-content-between">
                         <label class="flex-grow-1">
                             <input type="checkbox" class="form-check-input me-2">
-                            Lorem
+                            {{ task.text }}
                         </label>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="d-flex align-items-center justify-content-between">
-                        <label class="flex-grow-1">
-                            <input type="checkbox" class="form-check-input me-2">
-                            Lorem
-                        </label>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="d-flex align-items-center justify-content-between">
-                        <label class="flex-grow-1">
-                            <input type="checkbox" class="form-check-input me-2">
-                            Lorem
-                        </label>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="d-flex align-items-center justify-content-between">
-                        <label class="flex-grow-1">
-                            <input type="checkbox" class="form-check-input me-2">
-                            Lorem
-                        </label>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
+                        <button type="button" class="btn-close"></button>
                     </li>
                 </ul>
             </div>
@@ -79,26 +59,13 @@
                 <h2 class="mb-4 text-center">Completed tasks</h2>
                 <p class="text-center">Click on task to move it to 'To Do Tasks'</p>
                 <ul class="list-unstyled">
-                    <li class="d-flex align-items-center justify-content-between">
+                    <li v-for="task in completedTasks" :key="task.id"
+                        class="d-flex align-items-center justify-content-between">
                         <label class="flex-grow-1">
                             <input type="checkbox" class="form-check-input me-2">
-                            Lorem
+                            {{ task.text }}
                         </label>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="d-flex align-items-center justify-content-between">
-                        <label class="flex-grow-1">
-                            <input type="checkbox" class="form-check-input me-2">
-                            Lorem
-                        </label>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="d-flex align-items-center justify-content-between">
-                        <label class="flex-grow-1">
-                            <input type="checkbox" class="form-check-input me-2">
-                            Lorem
-                        </label>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
+                        <button type="button" class="btn-close"></button>
                     </li>
                 </ul>
             </div>
