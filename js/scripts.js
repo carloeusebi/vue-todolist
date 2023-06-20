@@ -2,6 +2,7 @@ const app = Vue.createApp({
     name: 'Todolist',
     data() {
         return {
+            searchedTask: '',
             tasks: [
                 {
                     id: 1,
@@ -48,11 +49,15 @@ const app = Vue.createApp({
     },
 
     computed: {
+        filteredTasks() {
+            const searched = this.searchedTask.trim().toLowerCase();
+            return this.tasks.filter(({ text }) => text.toLowerCase().includes(this.searchedTask));
+        },
         completedTasks() {
-            return this.tasks.filter(task => task.done);
+            return this.filteredTasks.filter(task => task.done);
         },
         toDoTasks() {
-            return this.tasks.filter(task => !task.done);
+            return this.filteredTasks.filter(task => !task.done);
         }
 
     },
