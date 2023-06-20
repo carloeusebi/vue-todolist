@@ -90,10 +90,10 @@ const app = Vue.createApp({
             this.$refs.addInput.focus();
         },
         setAllDone() {
-
+            this.tasks.forEach(task => task.done = true)
         },
         setAllToDo() {
-
+            this.tasks.forEach(task => task.done = false);
         },
         deleteAll() {
             this.tasks = [];
