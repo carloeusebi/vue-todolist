@@ -47,7 +47,7 @@
                     <li v-for="task in toDoTasks" :key="task.id"
                         class="d-flex align-items-center justify-content-between">
                         <label class="flex-grow-1">
-                            <input type="checkbox" class="form-check-input me-2">
+                            <input v-model="task.done" type="checkbox" class="form-check-input me-2">
                             {{ task.text }}
                         </label>
                         <button type="button" class="btn-close"></button>
@@ -62,7 +62,7 @@
                     <li v-for="task in completedTasks" :key="task.id"
                         class="d-flex align-items-center justify-content-between">
                         <label class="flex-grow-1">
-                            <input type="checkbox" class="form-check-input me-2">
+                            <input v-model="task.done" type="checkbox" class="form-check-input me-2">
                             {{ task.text }}
                         </label>
                         <button type="button" class="btn-close"></button>
